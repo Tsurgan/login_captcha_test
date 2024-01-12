@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="https://smartcaptcha.yandexcloud.net/captcha.js" defer></script>
+</head>
+<html>
+
+<body>
+
+<form action="lgn.php" method="post">
+    <div>
+        <label for="login">Логин (телефон или email):</label>
+        <input type="text" name="login" required>
+    </div>
+    <div>
+        <label for="pass">Пароль:</label>
+        <input type="password" name="pass" required>
+    </div>
+
+    <div
+            id="captcha-container"
+            class="smart-captcha"
+            data-sitekey="<sitekey>"
+    >
+        <input type="hidden" name="smart-token" value="<токен>">
+    </div>
+
+    <div>
+        <input type="submit" value="Войти">
+    </div>
+</form>
+
+
+</body>
+</html>
